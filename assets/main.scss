@@ -1,0 +1,223 @@
+---
+---
+
+$text-color: #46433A;
+$anchor-text-color: #CE534D;
+$background-color: #F1EED9;
+$main-text-font: 'Vollkorn', serif;
+$quote-text-font: 'Lato', sans-serif;
+
+
+
+body {
+	font-family: $main-text-font;
+	color: $text-color;
+	background-color: $background-color;
+}
+
+header,
+main {
+	padding: 0 20px;
+}
+
+/*** wrapper div for both header and main ***/
+.wrapper {
+	margin-top: 10%;
+}
+
+/*** anchor tags ***/
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: $anchor-text-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $text-color;
+	text-decoration: none;
+
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+  
+  li {
+	float: left;
+  }
+  
+  li a {
+	display: block;
+	text-align: center;
+	padding: 16px 16px 32px 0;
+	text-decoration: none;
+  }
+  
+  li a:hover {}
+
+
+
+/*** logo ***/
+.logo-container {
+	text-align: center;
+}
+
+.logo {
+	width: 128px;
+	height: 128px;
+	display: inline-block;
+	background-size: cover;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+}
+
+/*** author ***/
+.author-container h1 {
+	font-size: 2.8em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+/*** tagline ***/
+.tagline-container p {
+	font-size: 1.3em;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+/******/
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+}
+
+/*** footer ***/
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 20px;
+}
+
+.poweredby {
+	font-family: "Arial Narrow", Arial;
+	font-size: 0.6em;
+	line-height: 0.6em;
+	padding: 0 5px;
+}
+
+/*** media queries ***/
+/* X-Small devices (phones, 480px and up) */
+@media (min-width: 480px) {
+	/* wrapper stays 480px wide past 480px wide and is kept centered */
+	.wrapper {
+		width: 480px;
+		margin: 10% auto 0 auto;
+	}
+}
+
+/* All other devices (768px and up) */
+@media (min-width: 768px) {
+	/* past 768px the layout is changed and the wrapper has a fixed width of 680px
+	to accomodate both the header column and the content column */
+	.wrapper {
+		width: 680px;
+	}
+
+	/* the header column stays left and has a dynamic width with all contents
+	aligned right */
+	header {
+		float: left;
+		width: 30%;
+		text-align: right;
+	}
+
+	.author-container h1,
+	.logo-container,
+	.tagline-container p {
+		text-align: right;
+	}
+
+	main {
+		width: 55%;
+		margin-left: 40%;
+		padding: 0;
+	}
+}
+
+
+blockquote {
+	margin: 0px;
+	position: relative;
+	display: inline-block;
+	background: $background-color;
+	padding: 40px 30px 30px 60px;
+	border-radius: 10px;
+	font-family: $quote-text-font;
+	font-weight: lighter;
+	color: $text-color;
+	text-align: left;
+	
+	box-shadow: 1px 1px 1px #999,
+				2px 2px 1px #999,
+				3px 3px 1px #999;
+	transition-duration: .3s;
+	
+	span.author {
+	  position: relative;
+	  display: block;
+	  text-align: right;
+	  margin-top: 5px;
+	  font-size: 12px;
+	  font-family: $quote-text-font;
+	  color: #777;
+	  
+	  i {
+		position: relative;
+		background: $background-color;
+		padding-left: 5px;
+		font-style: italic;
+		z-index: 5;
+	  }
+	  
+	  &::before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #ccc;
+		z-index: 1;
+	  }
+	}
+	
+	&:hover {
+	  box-shadow: 1px 1px 5px #999,
+				  2px 2px 6px #999,
+				  3px 3px 7px #999;
+	}
+	
+	&::before {
+	  display: block;
+	  position: absolute;
+	  top: 10px;
+	  left: 10px;
+	  content: "\“";
+	  font-family:$main-text-font;
+	  font-size: 120px;
+	  color: #999
+	}
+  }
+  
