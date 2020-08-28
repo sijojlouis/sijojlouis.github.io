@@ -1,6 +1,6 @@
 
 # Hi, there!
 
-This is a personal website of @sijojlouis created using [Compass](https://github.com/excentris/compass) a [Jekyll](http://jekyllrb.com) theme.
+This is the repo of @sijojlouis's personal website, built using [Jekyll](http://jekyllrb.com) and [Compass](https://github.com/excentris/compass) a Jekyll theme.
 
 

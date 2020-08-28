@@ -8,7 +8,6 @@ $main-text-font: 'Vollkorn', serif;
 $quote-text-font: 'Lato', sans-serif;
 
 
-
 body {
 	font-family: $main-text-font;
 	color: $text-color;
@@ -155,7 +154,7 @@ footer {
 	}
 }
 
-
+/*** Quotes ***/
 blockquote {
 	margin: 0px;
 	position: relative;
